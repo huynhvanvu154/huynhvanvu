@@ -66,10 +66,6 @@
 															$stt++;
 															}
 														?>
-													 
-													<tr>
-														<td></td>
-													</tr>
 											</tbody>
 										</table>
 								

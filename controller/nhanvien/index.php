@@ -11,8 +11,10 @@
 	switch ($action) {
 
 		case 'chucnang':
-			# code...
-			require_once('view/nhanvien/chucnang.php');
+			if(isset($_SESSION['email']))
+				require_once('view/nhanvien/chucnang.php');
+			else
+				header('location: http://localhost/quanlybenhnhan/index.php?controller=nhanvien&action=dangnhap');
 			break;
 		case 'dangnhap':
 		//$_SESSION['email'] = $email;
@@ -65,9 +67,9 @@
 				}
 			require_once('view/dangnhap.php');
 			break;
-		case 'capmaQR':
-			# code...
-			require_once('view/nhanvien/capmaQR.php');
+		case 'dangxuat':
+				unset($_SESSION['email']);
+				header('location: http://localhost/quanlybenhnhan/index.php?controller=nhanvien&action=dangnhap');
 			break;
 		case 'thembenhnhan':
 			if(isset($_POST['themmoi'])){

@@ -1,6 +1,4 @@
-<style type="text/css">
-	.section{ height: 50vh; }
-</style>
+
 <?php 
 	include('view/header.php');
 	
@@ -12,7 +10,7 @@
 		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
 		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
 			<li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
-		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nhanvien&action=dangxuat"  > ĐĂNG XUẤT</a></li>
 		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a></li>
 	</ul>
 </div>

@@ -244,9 +244,10 @@ class Database
 								echo "đăng ký thất bại";
 
 					}
-					public function guicauhoi($id_cauhoi,$tieude,$noidung)
+					public function guicauhoi($id_cauhoi,$tieude,$noidung,$email)
 					{
-					$sql = "INSERT INTO cauhoi(id_cauhoi,tieude,noidung) VALUES (null,'$tieude','$noidung') ";
+					$sql = "INSERT INTO cauhoi(id_cauhoi,tieude,noidung,email) VALUES (null,'$tieude','$noidung','$email') ";
+					//var_dump($sql); die();
 						if($this->execute($sql)){
 							return true;
 						}

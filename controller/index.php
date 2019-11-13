@@ -23,9 +23,12 @@
 			require_once('view/trangchu.php');
 			break;
 		case 'danhsachbenhnhan':
+		if(isset($_SESSION['email'])){
 				$tbltable = "benhnhan";
 				$data = $db->get_all_benhnhan($tbltable);
 			require_once('view/bacsi/danhsachbenhnhan.php');
+		}else
+		header('location: http://localhost/quanlybenhnhan/index.php?controller=index&action=dangnhap');
 			break;
 		case 'thembenhan':
 				if(isset($_GET['idBN'])&isset($_GET['ten']))
@@ -60,6 +63,7 @@
 				require_once('view/bacsi/thembenhan.php');
 				break;
 		case 'danhsachbenhan':
+			if(isset($_SESSION['email'])){
 				$tbltable = "benhan";
 				$data_benhan = $db->get_all_benhan($tbltable);
 				if(isset($_POST['submit']))
@@ -77,6 +81,8 @@
 					}
 				}
 			require_once('view/bacsi/danhsachbenhan.php');
+		}else
+		header('location: http://localhost/quanlybenhnhan/index.php?controller=index&action=dangnhap');
 			break;
 		case 'themdonthuoc':
 				

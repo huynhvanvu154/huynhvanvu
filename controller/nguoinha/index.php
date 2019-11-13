@@ -13,8 +13,10 @@
 	switch ($action) {
 		
 		case 'chucnang':
-			# code...
-			require_once('view/nguoinha/chucnang.php');
+			if(isset($_SESSION['email']))
+				require_once('view/nguoinha/chucnang.php');
+			else
+				header('location: http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangnhap');
 			break;
 			
 		case 'dangky':{
@@ -80,17 +82,9 @@
 			require_once('view/dangnhap.php');
 			break;
 		}
-			case 'logout':
-					session_start();
-						
-
-					if (isset($_GET['dangxuat'])) {
-							if(logout() == TRUE) {
-								header("Location: 	http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangnhap");
-							}else {
-								die("Logout khong thanh cong");
-							}
-						}
+			case 'dangxuat':
+					unset($_SESSION['email']);
+				header('location: http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangnhap');
 				break;
 			
 			case 'dangkykham':{
@@ -138,16 +132,20 @@
 					break;
 			}
 			case 'guicauhoi':{
-				if(isset($_POST['guicauhoi'])){
-					//$id_cauhoi = $_POST('$id_cauhoi');
-					$tieude = $_POST['title'];
-					$noidung = $_POST['noidung'];
-
-						if ($db->guicauhoi(null,$tieude,$noidung)) {
-							$thanhcong[]='add_success';
-						}
+				if(isset($_SESSION['email'])){
+					if(isset($_POST['guicauhoi'])){
+						//$id_cauhoi = $_POST('$id_cauhoi');
+						$tieude = $_POST['title'];
+						$noidung = $_POST['noidung'];
+						$email  = $_SESSION['email'];
+							if ($db->guicauhoi(null,$tieude,$noidung,$email)) {
+								$thanhcong[]='add_success';
+							}
+					}
+					require_once('view/nguoinha/guicauhoi.php');
 				}
-				require_once('view/nguoinha/guicauhoi.php');
+				else
+					exit();
 				break;
 				}
 			case 'danhsachbenhnhan':

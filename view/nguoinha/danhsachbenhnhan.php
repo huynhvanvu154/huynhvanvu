@@ -68,9 +68,7 @@
 															}
 														?>
 													 
-													<tr>
-														<td></td>
-													</tr>
+													
 											</tbody>
 										</table>
 								</form>

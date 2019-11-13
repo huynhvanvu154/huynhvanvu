@@ -1,6 +1,4 @@
-<style type="text/css">
-	.section{ height: 50vh; }
-</style>
+
 <?php 
 	include('view/header.php');
 	

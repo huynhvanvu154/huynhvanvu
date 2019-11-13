@@ -46,22 +46,18 @@
 			require_once('view/dangnhap.php');
 			break;
 		case 'dangxuat':{
-				if (!empty($_GET['dangxuat'])) {
-						if(logout() == TRUE) {
-							header("Location: 	http://localhost/quanlybenhnhan/index.php?controller=index&action=dangnhap");
-						}else {
-							die("Logout khong thanh cong");
-						}
-				}
-		require_once('view/admin/chucnang.php');
-		}
-			
+				unset($_SESSION['email']);
+				header('location: http://localhost/quanlybenhnhan/index.php?controller=admin&action=dangnhap');
+					}
 			break;
 		case 'chucnang':{
+			if(isset($_SESSION['email']))
 				require_once('view/admin/chucnang.php');
-				break;
-			}
 				
+			else
+				header("Location: http://localhost/quanlybenhnhan/index.php?controller=admin&action=dangnhap");
+			}
+			break;
 				
 		
 			case 'themnhanvien':{
