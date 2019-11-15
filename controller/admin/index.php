@@ -78,13 +78,9 @@
 					if($db->Insert_db($name,$email,$password,$address,$birtday,$sex,$role, $sdt)){
 						$thanhcong[] = 'add_success';
 					}
-					
-					
-
 				}
 					require_once('view/admin/themnhanvien.php');
 					break;
-
 			}
 			require_once('view/admin/themnhanvien.php');
 			break;

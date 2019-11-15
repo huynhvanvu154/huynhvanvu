@@ -69,7 +69,6 @@ class Database
 								{
 									$data[]=$datas;
 								}	
-
 							}
 							return $data;
 					}
@@ -131,7 +130,7 @@ class Database
 
 				//ma hoa
 				$password = md5($password);
-				//kiem tra ten dang nhap co ton tai khong
+				//kiem tra ten dang nhap co tzon tai khong
 				$sql = mysqli_query($this->connect,"SELECT * FROM user WHERE email = '$email' 
 				AND password  = '$password' ");
 				//var_dump($sql);die();
@@ -173,14 +172,7 @@ class Database
 				echo "đăng ký thất bại";
 
 			}
-			public function logout()
-			{
-				unset($_SESSION[$name]);
-				session_destroy();
-
-				header("Location: 	http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangnhap");
-				return true;
-			}
+			
 			//sửa dữ liệu
 			public function update_benhnhan($idBN,$HotenBN,$email,$Gioitinh,$Ngaysinh,$Nghenghiep,$Diachi,$Dantoc)
 			{
@@ -244,21 +236,7 @@ class Database
 								echo "đăng ký thất bại";
 
 					}
-					public function guicauhoi($id_cauhoi,$tieude,$noidung,$email)
-					{
-					$sql = "INSERT INTO cauhoi(id_cauhoi,tieude,noidung,email) VALUES (null,'$tieude','$noidung','$email') ";
-					//var_dump($sql); die();
-						if($this->execute($sql)){
-							return true;
-						}
-						//var_dump($sql);die();
-						$result = mysqli_fetch_assoc($sql);
-							if($result)
-								echo '<p style = >gửi câu hỏi thành công! chờ nhân viên phản hồi! cảm ơn!</p>';
-							else
-								echo "thất bại";
-					}
-						//model dang ky
+					
 				public function Insert_nhanvien($name,$email,$password,$address,$birtday,$sex,$role, $sdt)
 				{
 					$sql = "INSERT INTO user(id,name,email,password,address,birtday,sex,role,sdt) VALUES(null,'$name','$email','$password','$address','$birtday',$sex,$role,$sdt)"; 
@@ -293,7 +271,6 @@ class Database
 								echo '<p style="text-align: center; color: red; font-size: 200%">Danh sách trống</p>';
 								//var_dump($data_nhanvien); die();
 						}
-						
 						else
 							{
 								while($datas = $this->get_db_nhanvien())
@@ -608,7 +585,7 @@ class Database
 						if($this->num_rows()==0)
 							{
 									$data_benhan =0;
-									echo '<p style="text-align: center; color: red; font-size: 200%">Danh sách trống</p>';
+									
 									//var_dump($data_nhanvien); die();
 							}
 							else
@@ -681,5 +658,6 @@ class Database
 				    echo 'Đổi mật khẩu thành công';
 				    }
 				}
+			
 			}
  ?>

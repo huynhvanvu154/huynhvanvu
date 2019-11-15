@@ -8,10 +8,9 @@
 				<?php
 					include('view/menu_ngang.php'); 
 				 ?>
-					<div class="col-12">
-						<div class="row"> 
-						  <div class="col-12"> 
-							   <legend style="text-align: center;"> <h3>Đăng ký Lịch Khám!</h3></legend> 
+					<div class="row"> 
+					  <div class="col-12"> 
+						<legend style="text-align: center;"> <h3>Đăng ký Lịch Khám!</h3></legend> 
 							   <form action="" method="post" class="form" role="form" style="width: 250px; margin: auto; "> 
 									<div class="row"> 
 										<input class="form-control" name="name" placeholder="Họ Và Tên" required="" autofocus="" type="text">
@@ -26,12 +25,12 @@
 									if(isset($thanhcong)&&in_array('add_success', $thanhcong)){
 									echo '<p style ="color: red; text-align: center" > ĐĂNG KÍ THÀNH CÔNG!!! CHỜ NHÂN VIÊN PHẢN HỒI</p>';
 									}else{
-									echo '<p style ="color: red"; "text-align: center" >a </p>';
+									echo '<p style ="color: red"; "text-align: center" ></p>';
 									}
 								?>
 						  	</div> 
 						 </div>
-					</div>
+					
 				</div>
 		</div>
  <?php 

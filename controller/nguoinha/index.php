@@ -131,23 +131,6 @@
 						require_once('view/nguoinha/timbenhnhan.php');
 					break;
 			}
-			case 'guicauhoi':{
-				if(isset($_SESSION['email'])){
-					if(isset($_POST['guicauhoi'])){
-						//$id_cauhoi = $_POST('$id_cauhoi');
-						$tieude = $_POST['title'];
-						$noidung = $_POST['noidung'];
-						$email  = $_SESSION['email'];
-							if ($db->guicauhoi(null,$tieude,$noidung,$email)) {
-								$thanhcong[]='add_success';
-							}
-					}
-					require_once('view/nguoinha/guicauhoi.php');
-				}
-				else
-					exit();
-				break;
-				}
 			case 'danhsachbenhnhan':
 				$tbltable = "benhnhan";
 				$data = $db->get_all_benhnhan($tbltable);

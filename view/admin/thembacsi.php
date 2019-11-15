@@ -2,19 +2,21 @@
 	include('view/header.php');
 	
  ?>
+ <div class="menu-ngang  ">
+	<ul class="ngang row ">
+		   <li class="col-2" style=""><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
+			<li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a></li>
+	</ul>
+</div>
  <div class="section row">
 				<?php 
 					include('view/menuleft.php');
 				 ?>
 			<div class="right col-9">
-							<div class="menu-ngang row ">
-									<ul class="ngang  ">
-										       <li class="col-2.4"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
-										    <li class="col-2.4"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
-										    <li class="col-2.4"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
-										    <li class="col-2.4"><a name="dangxuat" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat " > ĐĂNG XUẤT</a></li>
-									</ul>
-							</div>
 							<div class="col-12">
 								<div class="row"> 
 									<div class="col-12">

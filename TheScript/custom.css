@@ -1,0 +1,76 @@
+body{
+	 
+}
+.header{height: 180px; background-image: url('image/bg.png' ); text-align: center; border: 1px solid #e8e8e8;
+}
+.logo{margin-top: 15px; }
+.BN{margin-top: 15px; } 
+.footer{ background-image: url('image/bg.png'); color: white; text-align: center; }
+.menu-ngang{background-color: #2e97fa; height: 50px; border: 1px solid #e8e8e8; z-index: 10000;}
+.menu-ngang ul li{border-right: 1px solid #e8e8e8; letter-spacing: 2px; text-align:center; display:inline;    }
+.menu-ngang li a{font-size:15px; font-weight:bold; color: white; padding:  15px; border-right: 1px solid #00FF333; text-transform: uppercase; text-decoration:none; }
+.ngang{margin-top:10px; height: 20px; }
+ ul li a:hover{text-decoration: underline; color: black; border: 1px; }
+.menu-left{background-color: #819FF7; height: }
+.menu-left ul {background-color: #819FF7; font-size: 100%; padding: 0; list-style-type: none; text-align: center; margin: auto;}
+.menu-left ul li{line-height: 40px; border-bottom: 0.5px solid #e8e8e8; padding: 0 1em; list-style: none; }
+.menu-left ul li a{text-decoration: none; color: white; font-weight: bold; display: block; text-decoration: none;
+}
+legend {text-align: center;font-family: inherit; color: blueviolet;}
+ul li a:hover{text-decoration: underline; color: black; border: 1px;}
+.comment-main{
+	background-color: #74C2E1;
+	box-shadow: 1px 2px 6px 2px #005B9A;
+	margin-bottom: 10px;
+
+}
+.comment-main ul{
+	list-style: none;
+
+}
+.sub-cmt-img{
+	width: 55px !important;
+    height: 55px !important;
+    border-radius: 50%;
+} 
+.main-cmt-img{
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+.border-bottom{
+	font-size: 13px;
+	border-bottom: 1px solid #d3d3d3;
+}
+.user-comment{
+	background-color: #f3f3f3 !important;
+    box-shadow: 0px 5px 8px -4px #c1c1c1;
+}
+.user-comment-desc, .user-comment span{
+	color: #a0a0a0;
+}
+.user-comment-desc p{
+	font-size: 12px;
+	display: inline-block;
+	float: left;
+}
+.send-icon i{
+	font-size: 20px;
+	background: #f3f3f3;
+	padding: 6px 5px;
+	border-radius: 50%;
+	color: #74C2E1;
+	height: 35px;
+	width: 35px;
+}
+.user-comment:before{
+    content: "";
+    height: 0;
+    width: 0;
+    top: 0;
+    left: -10px;
+    position: absolute;
+    border-style: solid;
+    border-width: 13px 0 0 13px;
+	border-color: #f3f3f3 transparent transparent transparent; 
+}

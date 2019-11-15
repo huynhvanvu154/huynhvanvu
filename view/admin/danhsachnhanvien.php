@@ -2,38 +2,33 @@
 	include('view/header.php');
 	
  ?>
+ <div class="menu-ngang  ">
+	<ul class="ngang row ">
+		   <li class="col-2" style=""><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
+			<li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a></li>
+	</ul>
+</div>
  <div class="section row" >
 				<?php 
 					include('view/menuleft.php');
 				 ?>
 				<div class="right col-9">
-							<div class="menu-ngang row ">
-									<ul class="ngang  ">
-										     <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
-										    <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
-										    <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
-											<li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=nhanvien&action=dangxuat">ĐĂNG XUẤT</a></li>
-										    
-									</ul>
-				
-
-							</div>
 							<div class="col-12">
 								<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
 									<table>
-												<tr>
-													<input type="hidden" name="controller" value="admin">
-													<td><input type="text" name="name" placeholder="Nhập Tên Nhân Viên"></td>
-													<td id="timkiem"><input type="submit"  value="tìm kiếm"></td>
-												</tr>
-												
-												
+										<tr>
+											<input type="hidden" name="controller" value="admin">
+											<td><input type="text" name="name" placeholder="Nhập Tên Nhân Viên"></td>
+											<td id="timkiem"><input type="submit"  value="tìm kiếm"></td>
+										</tr>	
 									</table>
 									<input type="hidden" name="action" value="timnhanvien">
 								</form>
-								<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px; 	 ">
-										
-
+								<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
 										<h3 class="col-12" style="text-align: center; color: #0000FF">
 											<strong>DANH SÁCH NHÂN VIÊN</strong>
 										</h3>
@@ -43,58 +38,45 @@
 													<td>STT</td>
 													<td>HỌ VÀ TÊN</td>
 													<td>EMAIL</td>
-													
 													<td>ĐỊA CHỈ</td>
 													<td>NGÀY SINH</td>
 													<td>GIỚI TÍNH</td>
 													<td>LIÊN HỆ</td>
 													<td>ACTION</td>
-													
-													
 												</tr>
-												
 											</thead>
-										
 											<tbody>
-													<?php 
-														$stt=1;
-															foreach ($data_nhanvien as $value) {
-													?>
+											<?php 
+												$stt=1;
+													foreach ($data_nhanvien as $value) {
+											?>
+											
+												<tr>
+													<td><?php echo $stt?></td>
+													<td><?php echo $value['name']; ?></a></td>
+													<td><?php echo $value['email']; ?></td>
+													<td><?php echo $value['address']; ?></td>
+													<td><?php echo $value['birtday']; ?></td>
+													<td><?php echo $value['sex']; ?></td>
+													<td><?php echo $value['sdt']; ?></td>
+													<td>
+														<button><a onclick="return confirm('bạn có chắc muốn sửa không?')"href="index.php?controller=admin&action=suanhanvien&id=<?php echo	$value['id'];?>">Sửa
+														</a></button>
+														<button><a onclick="return confirm('bạn có chắc muốn xóa không?')" href="index.php?controller=admin&action=xoanhanvien&id=<?php echo $value['id'];?>">Xóa
+														</a>
+														</button>
+																									
+													</td> 
 													
-														<tr>
-															
-															<td><?php echo $stt?></td>
-
-															<td><?php echo $value['name']; ?></a></td>
-															<td><?php echo $value['email']; ?></td>
-														
-															<td><?php echo $value['address']; ?></td>
-															<td><?php echo $value['birtday']; ?></td>
-															<td><?php echo $value['sex']; ?></td>
-															<td><?php echo $value['sdt']; ?></td>
-															<td>
-																<button><a onclick="return confirm('bạn có chắc muốn sửa không?')"href="index.php?controller=admin&action=suanhanvien&id=<?php echo	$value['id'];?>">Sửa
-																</a></button>
-																<button><a onclick="return confirm('bạn có chắc muốn xóa không?')" href="index.php?controller=admin&action=xoanhanvien&id=<?php echo $value['id'];?>">Xóa
-																</a>
-																</button>
-																											
-															</td> 
-															
-														
-														</tr>
-													
-														<?php
-															$stt++;
-															}
-														?>
-													 
-													<tr>
-														<td></td>
-													</tr>
+												
+												</tr>
+											
+												<?php
+													$stt++;
+													}
+												?>
 											</tbody>
 										</table>
-								
 								</form>
 							</div>
 							<div  class="col-12">

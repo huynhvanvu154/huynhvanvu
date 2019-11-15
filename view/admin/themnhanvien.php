@@ -2,21 +2,21 @@
 	include('view/header.php');
 	
  ?>
+ <div class="menu-ngang  ">
+	<ul class="ngang row ">
+		   <li class="col-2" style=""><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
+			<li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a></li>
+	</ul>
+</div>
  <div class="section row">
 				<?php 
 					include('view/menuleft.php');
 				 ?>
 			<div class="right col-9">
-							<div class="menu-ngang row ">
- 
-									<ul class="ngang  ">
-
-										       <li class="col-2.4"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
-										    <li class="col-2.4"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
-										    <li class="col-2.4"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
-										    <li class="col-2.4"><a name="dangxuat" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat " > ĐĂNG XUẤT</a></li>
-									</ul>
-							</div>
 							<div class="col-12">
 								<div class="row"> 
 									<div class="col-12">
@@ -28,8 +28,9 @@
 
 												}
 											 ?>
-									 <legend style="text-align: center;"> Cấp Tài Khoản Cho Nhân Viên!</legend><a href="http://localhost/quanlybenhnhan/index.php?controller=admin&action=danhsachnhanvien" style="text-decoration: none; margin-top: -35px; margin-right: 165px; float: right;"> Danh Sách Nhân Viên </a>
-									  <form action="" method="post" class="form" role="form" style="width: 250px; margin: auto; margin-bottom: 10px; "> 
+									 <h3 style="color: #0000FF"> Cấp Tài Khoản Cho Nhân Viên!</h3>
+									 
+									 <div style="max-width: 17%; border: 1px solid red; max-height: 20%; background: antiquewhite;list-style: none;"><a href="http://localhost/quanlybenhnhan/index.php?controller=admin&action=danhsachnhanvien"> Danh Sách Nhân Viên </a></div> <form action="" method="post" class="form" role="form" style="width: 250px; margin: auto; margin-bottom: 10px; ">
 									  	<div class="row"> 
 									  		<input class="form-control" name="hoten" placeholder="Họ Và Tên" required="" autofocus="" type="text">
 									  		 <input class="form-control" name="email" placeholder="Email" type="email"> 

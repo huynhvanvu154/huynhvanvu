@@ -1,6 +1,6 @@
 						<div class="right col-9">
-							<div class="menu-ngang row ">
-									<ul class="ngang  ">
+							<div class="menu-ngang  ">
+									<ul class="ngang row ">
 										     <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
 										    <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
 										    <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>

@@ -1,37 +1,32 @@
 /*==========================HEADER*/
-#clockdate{
-	margin: auto;
+body{
+	font-family: Sans-serif ;
 }
-.clockdate-wrapper {
-    background-color: #333; padding:10px; max-width:170px; width:100%; text-align:center; margin:0 0 -2px 0; }
-#clock{
-    background-color:#333; font-family: sans-serif; font-size:25px; text-shadow:0px 0px 1px #fff; color:#fff; }
-#clock span {
-	color:#888; text-shadow:0px 0px 1px #333;  position:relative; top:-7px; }
-#date {
-    font-size:9px;  color:#fff; }
 nav.navbar-inverse{
-	height:72px; width:100%; top:0; z-index:999; }
+	 width:100%; top:0; z-index:999; }
 .hederimg{
 	margin-top:15px;
 	margin-left:15px;
 }
 /*===================================*/
-.input-field{
-	border: 3px groove cornflowerblue; border-radius: 10px; width: 21em; padding: 4em 2em 1em 2em; margin:1em 5em 5em 3em; height:435px; }
-.qr-field{
-	border: 3px groove cornflowerblue; border-radius: 10px; width: 26.5em; height:26.5em; padding: .5em 2em 2em 2em; margin:-37em 3em 5em; float:right; }
-.myoutput{
-	border: 3px groove green; border-radius: 10px; margin:0em 20em 0em 20em; }
-h3{
-	text-align:center;
-}
 .logo{margin-top: 15px; }
 .BVN{height: 100px; }
 .hospital{letter-spacing: 15px; font-style: italic; font-size: 300%; font-family: "Comic Sans MS", cursive, sans-serif; color: red; left: 0px; padding-left: 0px; margin-left: -20px; text-shadow: 0.1em 0.1em 0.2em black; }
 .name{text-shadow: 0.1em 0.1em #333; width: 700px; height: 80px; float: right; color: #C8FE2E;}
 .QL{
-	font-size: 400%; font-family: Impact, Charcoal, sans-serif; letter-spacing: 10px; text-shadow: 0.1em 0.1em #333; color: #C8FE2E; }
-.BN{margin-top: 30px; font-family:  sans-serif; color: #C8FE2E; letter-spacing: 6px; text-shadow: 0.1em 0.1em 0.2em black;
+	}
+.BN{margin-top: 15px; 
 } 
 legend {text-align: center;font-family: inherit; color: blueviolet;}
+.menu-ngang{background-color: #2e97fa; height: 50px; border: 1px solid #e8e8e8; z-index: 9999;margin-left: -15px;
+    margin-right: -15px;}
+ .menu-ngang ul li{border-right: 1px solid #e8e8e8;  letter-spacing: 2px; text-align:center; display:inline;    }
+.menu-ngang li a{font-size:15px; font-weight:bold; color: white; padding:  15px; border-right: 1px solid #00FF333; text-transform: uppercase; text-decoration:none; }
+.ngang{margin-top:10px; height: 20px; }
+ ul li a:hover{text-decoration: underline; color: black; border: 1px; }
+ .menu-left{background-color: #819FF7; height: }
+.menu-left ul {background-color: #819FF7; font-size: 100%; padding: 0; list-style-type: none; text-align: center;}
+.menu-left ul li{line-height: 50px; border-bottom: 0.5px solid #e8e8e8; padding: 0 1em; list-style: none; }
+.menu-left ul li a{text-decoration: none; color: white; font-weight: bold; display: block; text-decoration: none;
+display: inline-block;}
+ul li a:hover{text-decoration: underline; color: black; border: 1px;}

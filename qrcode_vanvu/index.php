@@ -22,37 +22,68 @@ function getUsernameFromEmail($email) {
 <html lang="en-US">
 	<head>
 		<title></title>
-		<link rel="icon" href="img/favicon.ico" type="image/png">
-		<link rel="stylesheet" href="libs/css/bootstrap.min.css">
 		<link rel="stylesheet" href="libs/style.css">
-		<script src="libs/navbarclock.js"></script>
-		<title>quan-ly-benh-nhan-nhi</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		
 	</head>
-	<body  style="font-family: inherit;  font-size: 13px">
-		<div class="header row" style="height: 180px; background-image: url('images/bg.png' ); text-align: center; border: 1px solid #e8e8e8;">
+	<body  style="font-family: ;  ">
+	<div class="container-fluid">
+		<div class="header row" style="height: 180px; background-image: url('images/bg.png' ); text-align: center;">
 			<div class="BVN col-4"><a  href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=trangchu"><img src="images/BVN.PNG" width="300" height="100"></a></div>
 			<div class="QL col-8"><img src="images/ql.png" width="500" height="100px"></div>
 			<div class="logo col-4">
 				<div class="row">
 					<div class="icon col-4"><img src="images/icon2.png" height="60px;"></div>
-					<div class="hospital col-8">hospital</div>
+					<div class="hospital col-8" ><img src="images/HPT.png" style="margin-bottom: 20px;"></div>
 				</div>
 			</div>
 			<div class="name col-8">
-				<div class="BN"><h3 style="font-size: 35px">BỆNH NHÂN NHI TRONG BỆNH VIỆN</h3></div>
+				<div class="BN"><img src="images/BN.png"></div>
 			</div>	
 		</div>
+		<div class="menu-ngang  ">
+			<ul class="ngang row ">
+				     <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
+				    <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
+				    <li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
+					<li class="col-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
+				    
+			</ul>
+		</div>
+		<div class="section row">
+			<div class="menu-left col-md-3">
+				<ul  class="doc row ">
+					<li class="col-12">
+						<div class="dropdown">
+						  		 <a href="index.php?controller=nguoinha&action=dangnhap" class="btn btn-primary " style="width: 200px"> Bệnh Nhân</a>
+					 	 </div>
+					</li>
+					<li class="col-12">
+						<div class="dropdown">
+						   <a href="index.php?controller=nhanvien&action=dangnhap" class="btn btn-primary "style="width: 200px"> Nhân Viên</a>
+					 	 </div>
+					</li>
+					<li class="col-12">
+						<div class="dropdown">
+						   <a href="index.php?controller=index&action=dangnhap" class="btn btn-primary "style="width: 200px"> Bác Sĩ</a>
+					 	 </div>
+					</li>
+					<li class="col-12">
+						<div class="dropdown">
+						  		  <a href="index.php?controller=admin&action=dangnhap" class="btn btn-primary "style="width: 200px"> Admin</a>
+						  	</div>  
+					</li>
+				</ul>
+			</div>
+		<div class="col-md-9">
 		<div class="myoutput" style="height: auto; margin-bottom: 10px;margin-top: 10px">
-			<h3 style="    font-size: 23px; margin-left: 63px;"><strong style="color: #0000FF">QRCODE THÔNG TIN BỆNH NHÂN</strong><a class="btn btn-primary submitBtn"  href="http://localhost/quanlybenhnhan/qrcode_vanvu/readqr.php" class="no-print" style="float: right;">Đọc mã QR</a> </h3>
-
-			<div class="input-field" style="">
+			<h3 style="    font-size: 23px; text-align: center;"><strong style="color: #0000FF">QRCODE THÔNG TIN BỆNH NHÂN</strong></h3>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="input-field col-md-12">
 				<div class="form-group" >
 						<a class="btn btn-primary submitBtn" name="danhsach" style="width: 20em" href="http://localhost/quanlybenhnhan/index.php?controller=nhanvien&action=danhsachbenhnhan">DANH SÁCH BỆNH NHÂN</a>
 					</div>
@@ -96,6 +127,7 @@ function getUsernameFromEmail($email) {
 					</div>
 					
 				</form>
+			</div>
 
 <?php 
 	if(isset($_POST['submit']) )
@@ -134,13 +166,15 @@ function getUsernameFromEmail($email) {
 		echo '<p style ="color: red"; "text-align: center" > </p>';
 		}								
 ?>
+
 	</div>
 			<?php
 				if(!isset($filename)){
 					$filename = "author";
 				}
 			?>
-			<div class="qr-field">
+		<div class="col-md-6">
+			<div class="qr-field col-md-12">
 				<h2 style="text-align:center">QR Code Result: </h2>
 				<center>
 					<div class="qrframe" style="border:2px solid black; ">
@@ -148,12 +182,17 @@ function getUsernameFromEmail($email) {
 					</div>
 					<div class="form-group" style="padding-top: 10px">
 						<a class="btn btn-primary submitBtn" style="" href="download.php?file=<?php echo $filename; ?>.png ">Download QR Code</a>
+						<a class="btn btn-primary submitBtn"  href="http://localhost/quanlybenhnhan/qrcode_vanvu/readqr.php" class="no-print" >Đọc mã QR</a> 
 					</div>
 				</center>
 			</div>
 		</div>
+		</div>
+		</div>
+	</div>
+</div>
 		<footer>
-		<div class="footer row" style=" background-image: url('images/bg.png' ); text-align: center; border: 1px solid #e8e8e8;">
+		<div class="footer row" style=" background-image: url('images/bg.png' ); text-align: center;background-repeat: no-repeat;">
 				<div class="anhleft col-4">
 					<a href=""><img src="images/banquyen.png" width="150px" height="100px"></a>
 				</div>
@@ -170,6 +209,7 @@ function getUsernameFromEmail($email) {
 				</div>
 			</div>
 		</footer>
+</div>
 	</body>
 	
 </html>

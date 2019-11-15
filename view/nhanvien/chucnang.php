@@ -3,14 +3,14 @@
 	include('view/header.php');
 	
  ?>
- <div class="menu-ngang">
+ <div class="menu-ngang ">
 
-		<ul class="ngang col-12 ">
-		    <li class="col-2" style="margin-left: -28px"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
+		<ul class="ngang  row">
+		    <li class="col-2" style=""><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
 		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
 		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
 			<li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
-		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nhanvien&action=dangxuat"  > ĐĂNG XUẤT</a></li>
+		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a></li>
 		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a></li>
 	</ul>
 </div>

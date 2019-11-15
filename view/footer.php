@@ -15,3 +15,4 @@
 							<a href=""><img src="view/images/banquyen.png" width="150px" height="100px"></a>
 						</div>
 			</div>
+		</div>
