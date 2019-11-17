@@ -46,3 +46,12 @@
  <?php 
  	include('view/footer.php');
   ?>
+ <script type="text/javascript">
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+</script>

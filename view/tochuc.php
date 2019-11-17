@@ -1,25 +1,31 @@
 <?php 
 	include('view/header.php');
-	
+	include('view/menu_ngang.php');
  ?>
- <div class="menu-ngang " >
-		<ul class="ngang row">
-		    <li class="col-md-3" style=""><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
-		    <li class="col-md-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
-		    <li class="col-md-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
-			<li class="col-md-3"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
-		</ul>
-</div>
- <div class="section row">
-				<?php 
-					include('view/menuleft.php');
-				 ?>
-				<div class="col-9">
-					<div class="col-12 " >
-						<img src="view/images/mohinh.jpg" width="1000">
+ 
+ <div class="container">
+	<div class="row">
+		<div class="col-12  menu-left col-lg-3  p-0">
+			<?php 
+			include('view/menuleft.php');
+			?>
+		</div>
+		<div class="col-12 col-lg-9">
+					<div class="row tochuc" >
+						<img src="view/images/mohinh.jpg" style="max-width: 100%;" >
 					</div>
 				</div>
 		</div>
+</div>
  <?php 
  	include('view/footer.php');
   ?>
+  <script type="text/javascript">
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+</script>

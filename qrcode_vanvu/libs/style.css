@@ -9,6 +9,8 @@ nav.navbar-inverse{
 	margin-left:15px;
 }
 /*===================================*/
+.header{height: 180px; background-image: url('../images/bg.png' ); text-align: center; border: 1px solid #e8e8e8;
+}
 .logo{margin-top: 15px; }
 .BVN{height: 100px; }
 .hospital{letter-spacing: 15px; font-style: italic; font-size: 300%; font-family: "Comic Sans MS", cursive, sans-serif; color: red; left: 0px; padding-left: 0px; margin-left: -20px; text-shadow: 0.1em 0.1em 0.2em black; }

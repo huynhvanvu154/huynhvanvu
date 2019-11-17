@@ -3,27 +3,59 @@
 	include('view/header.php');
 	
  ?>
- <div class="menu-ngang ">
+ <div class="container">
+	<div class="row">
+		<div class="col-12 p-0">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+				<!-- <a class="navbar-brand" href="#">BNV</a> -->
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-		<ul class="ngang  row">
-		    <li class="col-2" style=""><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a></li>
-		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a></li>
-		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a></li>
-			<li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a></li>
-		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a></li>
-		    <li class="col-2"><a href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a></li>
-	</ul>
+				<div class="collapse navbar-collapse" id="navbarsExample03">
+					<ul class="navbar-nav mr-auto nav-custom six">
+						<li class="nav-item active ">
+							<a  class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=index&action=trangchu">TRANG CHỦ</a>
+						</li>
+						<li class="nav-item active">
+							<a  class="nav-link"  href="http://localhost/quanlybenhnhan/index.php?controller=index&action=gioithieu">GIỚI THIỆU</a>
+						</li>
+						<li class="nav-item active">
+
+							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=index&action=tochuc">TỔ CHỨC</a>
+						</li>
+						<li class="nav-item active">
+							<a  class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a>
+						</li>
+						<li class="nav-item active  d-block d-sm-block d-md-block d-lg-none" >
+							<a  class="nav-link" href="#" onclick="openNav()">VAI TRÒ</a>
+						</li>
+					</ul>						
+
+				</ul>
+			</div>
+		</nav>
+	</div>
 </div>
- <div class="section row">
-				<?php 
-					include('view/menuleft.php');
-				 ?>
-				<div class="right col-9">
-					<div class="menu-left col-12">
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12  menu-left col-lg-3  p-0">
+			<?php 
+			include('view/menuleft.php');
+			?>
+		</div>
+		<div class="col-12 col-lg-9 section">
+			<div class="menu-right">
 							<ul  class="doc row ">
-								<li class="col-12">
-										
-									<div class="dropdown">
+								<li class="col-12 col-lg-12">
+									<div class="dropdown ">
 									  		 <a href="http://localhost/quanlybenhnhan/qrcode_vanvu/" class="btn btn-primary " style="width: 250px;"> Thêm Thông Tin Bệnh Nhân</a>
 									    
 								 	 </div>
@@ -52,6 +84,16 @@
 				</div>
 				
 		</div>
+	</div>
  <?php 
  	include('view/footer.php');
   ?>
+ <script type="text/javascript">
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+</script>

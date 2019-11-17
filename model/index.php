@@ -20,6 +20,10 @@ class Database
 				}
 				return $this->connect;
 			}
+			public  function get_insert_last_id()
+			{
+				return mysqli_insert_id($this->connect);
+			}
 			//thuc thi cau lenh truy van
 			public function execute($sql)
 				{
@@ -129,7 +133,8 @@ class Database
 			{
 
 				//ma hoa
-				$password = md5($password);
+				//var_dump($password); die();
+				//$password = md5($password);
 				//kiem tra ten dang nhap co tzon tai khong
 				$sql = mysqli_query($this->connect,"SELECT * FROM user WHERE email = '$email' 
 				AND password  = '$password' ");

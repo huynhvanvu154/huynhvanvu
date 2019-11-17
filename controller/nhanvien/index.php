@@ -30,7 +30,7 @@
 					}
 			if(isset($_POST['dangnhap'])){
 					$email = $_POST['email'];
-					$password = $_POST['password'];
+					$password =md5($_POST['password']);
 					if(!$email||!$password){
 						echo 'vui long dien day du ten dang nhap va password';
 						exit();

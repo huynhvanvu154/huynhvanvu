@@ -57,12 +57,13 @@
 					}
 				if(isset($_POST['dangnhap'])){
 					$email = $_POST['email'];
-					$password = $_POST['password'];
+					$password = md5($_POST['password']);
 					if(!$email||!$password){
 						echo 'vui long dien day du ten dang nhap va password';
 						exit();
 					}
 					$result = $db->login($email,$password);
+					//var_dump($result);  die();
 					if($db->login($email,$password))
 					{
 						$_SESSION['password'] = $result['password'];

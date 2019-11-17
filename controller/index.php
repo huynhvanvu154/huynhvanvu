@@ -135,7 +135,7 @@
 					}
 			if(isset($_POST['dangnhap'])){
 					$email = $_POST['email'];
-					$password = $_POST['password'];
+					$password = md5($_POST['password']);
 					if(!$email||!$password){
 						echo 'vui long dien day du ten dang nhap va password';
 						exit();
@@ -171,26 +171,23 @@
 			require_once('view/dangnhap.php');
 			break;
 		case 'doimatkhau':
-			//if(isset($_SESSION['password']))
-			//var_dump($_SESSION['id']);
-			//var_dump($_SESSION['role']);
-			//var_dump($_SESSION['password']);
-			//die();
+			
 		if(isset($_POST['changpass']))
 		{	
 			$id = $_SESSION['id'];	
 			$pass_cu = md5($_POST['old_pass']);
 			$new_pass = md5($_POST['new_pass']);
 			$pass_re = md5($_POST['re_new_pass']);
-			if($_SESSION['password']<>$pass_cu)
+			if(md5($_SESSION['password'])<>md5($pass_cu))
 				$loi_1 = 'error';
 				//echo "Mật Khẩu Cũ Không Chính Xác! Xin nhập lại!!!";
-			elseif ($new_pass<>$pass_re) {
+			elseif (md5($new_pass)<>md5($pass_re) ){
 				$loi_2='error';
 				//echo "Mật khẩu mới không khớp";
 			}
 			else{
 				$result =$db->doimatkhau($new_pass,$id);
+
 				//var_dump($result); die();
 			}
 		}
