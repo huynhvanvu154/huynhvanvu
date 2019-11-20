@@ -654,7 +654,7 @@ class Database
 						}
 				public function doimatkhau($new_pass,$id)
 				{
-					$new_pass = md5($new_pass); // Mã hoá mật khẩu sang MD5
+					//$new_pass = md5($new_pass); // Mã hoá mật khẩu sang MD5
 				    // Lệnh SQL đổi mật khẩu
 				    $sql = "UPDATE user SET password = '$new_pass' WHERE id = '$id'";
 				    // Thực hiện truy vấn

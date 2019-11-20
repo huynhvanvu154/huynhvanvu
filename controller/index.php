@@ -170,6 +170,10 @@
 				}
 			require_once('view/dangnhap.php');
 			break;
+			case 'dangxuat':
+				unset($_SESSION['email']);
+				header('location: http://localhost/quanlybenhnhan/index.php?controller=index&action=dangnhap');
+			break;
 		case 'doimatkhau':
 			
 		if(isset($_POST['changpass']))

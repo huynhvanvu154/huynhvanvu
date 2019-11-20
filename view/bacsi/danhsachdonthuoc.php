@@ -27,7 +27,7 @@
 							<a  class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a>
+							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=index&action=dangxuat"  > ĐĂNG XUẤT</a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a>
@@ -59,7 +59,7 @@
 									
 
 						<h3 class="col-12" style="text-align: center; color: #0000FF">
-							
+						
 							<span><strong>Tên Bệnh Nhân:</strong></span> 
 							<span style="color: red"><?php echo $tenbenhnhan; ?></span></br>
 							<span><strong>Bệnh Án:</strong></span> 
@@ -78,7 +78,7 @@
 									}
 									}
 								?>
-
+	
 							</span></br>
 							<strong>ĐƠN THUỐC</strong>
 						</h3>

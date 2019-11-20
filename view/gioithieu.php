@@ -13,7 +13,7 @@ include('view/menu_ngang.php');
 		<div class="col-12 col-lg-9">
 			
 			<h1 class="text-center">GIỚI THIỆU CHUNG  
-			VỀ BỆNH VIỆN NHI</h1>
+			VỀ BỆNH VIỆN</h1>
 
 			<p>Được hình thành từ năm 1967, đến nay Bệnh viện đa khoa tỉnh Hậu Giang đã trở thành bệnh viện đa khoa hạng II, có đội ngũ cán bộ chuyên khoa, trình độ chuyên môn sâu và trang thiết bị phù hợp, hiện đại đảm bảo thực hiện công tác cấp cứu, khám, chữa bệnh, đào tạo nhân lực y tế, chỉ đạo tuyến, phòng chống dịch bệnh và nghiên cứu khoa học, triển khai ứng dụng khoa học, công nghệ, kỹ thuật hiện đại phục vụ người bệnh trên địa bàn tỉnh Hậu Giang và các vùng lân cận.</p>
 			<p>

@@ -9,7 +9,7 @@ nav.navbar-inverse{
 	margin-left:15px;
 }
 /*===================================*/
-.header{height: 180px; background-image: url('../images/bg.png' ); text-align: center; border: 1px solid #e8e8e8;
+.header{background-repeat: no-repeat; background-image: url('../images/bg.png' ); text-align: center; border: 1px solid #e8e8e8;
 }
 .logo{margin-top: 15px; }
 .BVN{height: 100px; }

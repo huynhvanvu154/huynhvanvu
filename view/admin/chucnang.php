@@ -28,7 +28,7 @@ include('view/header.php');
 							<a  class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangky">ĐĂNG KÝ</a>
 						</li>
 						<li class="nav-item active">
-							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=dangxuat"  > ĐĂNG XUẤT</a>
+							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=admin&action=dangxuat"  > ĐĂNG XUẤT</a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link" href="http://localhost/quanlybenhnhan/index.php?controller=index&action=doimatkhau"  > ĐỔI MẬT KHẨU</a>
