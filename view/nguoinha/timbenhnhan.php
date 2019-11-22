@@ -55,7 +55,7 @@ include('view/header.php');
 				<table>
 					<tr>
 						<input type="hidden" name="controller" value="nguoinha">
-						<td><input type="text" name="ten" placeholder="Nhập Tên Bệnh Nhân"></td>
+						<td><input type="text" name="ten" placeholder="Nhập CMT Bệnh Nhân"></td>
 						<td id="timkiem"><input type="submit" value="tìm kiếm"></td>
 					</tr>
 				</table>

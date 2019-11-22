@@ -51,69 +51,59 @@ include('view/header.php');
 			?>
 		</div>
 		<div class="col-12 col-lg-9 section">
-				<form class="row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
-					<table>
-						<tr>
-							<input type="hidden" name="controller" value="nguoinha">
-							<td><input type="text" name="name" placeholder="Nhập Tên Bác Sĩ"></td>
-							<td id="timkiem"><input type="submit"  value="tìm kiếm"></td>
-						</tr>	
-					</table>
-					<input type="hidden" name="action" value="timbacsi">
-				</form>
-				<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;  ">
+			<form class="row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
+				<table>
+					<tr>
+						<input type="hidden" name="controller" value="nguoinha">
+						<td><input type="text" name="name" placeholder="Nhập Tên Bác Sĩ"></td>
+						<td id="timkiem"><input type="submit"  value="tìm kiếm"></td>
+					</tr>	
+				</table>
+				<input type="hidden" name="action" value="timbacsi">
+			</form>
+			<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;  ">
 
-					<h3 class="col-12" style="text-align: center; color: #0000FF">
-						<strong>DANH SÁCH BÁC SĨ</strong>
-					</h3>
+				<h3 class="col-12" style="text-align: center; color: #0000FF"><strong>DANH SÁCH BÁC SĨ</strong></h3>
+				<table class="col-12" border="1px;">
+					<thead>
+						<tr style="color: #0101DF; text-align: center;">
+							<td>STT</td>
+							<td>HỌ VÀ TÊN</td>
+							<td>EMAIL</td>
+							<td>ĐỊA CHỈ</td>
+							<td>NGÀY SINH</td>
+							<td>GIỚI TÍNH</td>
+							<td>LIÊN HỆ</td>
+						</tr>
+					</thead>
 
-					<table class="col-12" border="1px;">
-						<thead>
-							<tr style="color: #0101DF; text-align: center;">
-								<td>STT</td>
-								<td>HỌ VÀ TÊN</td>
-								<td>EMAIL</td>
-								<td>ĐỊA CHỈ</td>
-								<td>NGÀY SINH</td>
-								<td>GIỚI TÍNH</td>
-								<td>LIÊN HỆ</td>
-							</tr>
-
-						</thead>
-
-						<tbody>
-							<?php 
-							$stt=1;
-							foreach ($data_bacsi as $value) {
-								?>
-								<tr>
-									<td><?php echo $stt?></td>
-									<td><?php echo $value['name']; ?></a></td>
-									<td><?php echo $value['email']; ?></td>
-									<td><?php echo $value['address']; ?></td>
-									<td><?php echo $value['birtday']; ?></td>
-									<td><?php echo $value['sex']; ?></td>
-									<td><?php echo $value['sdt']; ?></td>s
-
-								</tr>
-
-								<?php
-								$stt++;
-							}
+					<tbody>
+						<?php 
+						$stt=1;
+						foreach ($data_bacsi as $value) {
 							?>
-						</tbody>
-					</table>
+							<tr>
+								<td><?php echo $stt?></td>
+								<td><?php echo $value['name']; ?></a></td>
+								<td><?php echo $value['email']; ?></td>
+								<td><?php echo $value['address']; ?></td>
+								<td><?php echo $value['birtday']; ?></td>
+								<td><?php echo $value['sex']; ?></td>
+								<td><?php echo $value['sdt']; ?></td>s
 
-				</form>
-			</div>
-			<div  class="col-12">
-				<div class="row">
+							</tr>
+							<?php
+							$stt++;
+						}
+						?>
+					</tbody>
+				</table>
 
-
-				</div>
-			</div>
+			</form>
 		</div>
+		
 	</div>
+</div>
 </div>
 <?php 
 include('view/footer.php');

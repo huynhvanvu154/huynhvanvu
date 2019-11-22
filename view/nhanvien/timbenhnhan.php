@@ -57,7 +57,7 @@
 					<table>
 								<tr>
 									<td><input type="hidden" name="controller" value="nhanvien"></td>
-									<td><input style="margin-left: 15px;" type="text" name="ten" placeholder="Nhập Tên Bệnh Nhân"></td>
+									<td><input style="margin-left: 15px;" type="text" name="ten" placeholder="Nhập CMT Bệnh Nhân"></td>
 									<td id="timkiem"><input type="submit" value="tìm kiếm"></td>
 								</tr>
 								

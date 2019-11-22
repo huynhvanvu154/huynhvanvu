@@ -17,6 +17,8 @@ function getUsernameFromEmail($email) {
 	$username = substr($email, 0, $pos);
 	return $username;
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en-US">
@@ -34,22 +36,21 @@ function getUsernameFromEmail($email) {
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 </head>
 <body >
 	<div class="container">
-		<div class=" header row">
-			<div class="BVN col-12 text-left">
-				<a  href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=trangchu">
-					<img src="images/icon2.png" height="60px;">
-					<img src="images/BVN.PNG" width="200" height="80">
-				</a>
-			</div>
+	<div class=" header row">
+		<div class=" col-12 text-left">
+			<a  href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=trangchu">
+				<img src="../view/images/header.png"  >
+			</a>
 		</div>
 	</div>
+</div>
 	<div class="container">
 	<div class="row">
 		<div class="col-12 p-0">
@@ -165,10 +166,10 @@ function getUsernameFromEmail($email) {
 						$body =  $_POST['cmt'];
 						$sql = "INSERT INTO benhnhan(idBN,HotenBN,email,Gioitinh,Ngaysinh,Nghenghiep,Diachi,Dantoc,Cmt) VALUES(null,'$HotenBN','$email','$Gioitinh','$Ngaysinh','$Nghenghiep','$Diachi','$Dantoc','$Cmt')";
 
-
+					//	var_dump($sql); die();
 						$codeContents = 'mailto:'.$email.'?HotenBN='.$HotenBN.'&Cmt='.$Cmt.'&Gioitinh='.$Gioitinh.'&Ngaysinh='.$Ngaysinh.'&Nghenghiep='.$Nghenghiep.'&Diachi='.$Diachi.'&Dantoc='.$Dantoc;
-
-						if ($conn->query($sql) === TRUE) {
+						//var_dump($codeContents); die();
+						if ($conn->query($sql) == TRUE) {
 							$thanhcong[]='add_success';
 							$id = mysqli_insert_id($conn);
 							$codeContents = "http://localhost/quanlybenhnhan/index.php?controller=index&action=danhsachdonthuoc&idBN=".$id."&ten=".$HotenBN;
@@ -210,37 +211,9 @@ function getUsernameFromEmail($email) {
 </div>
 </div>
 <div class="container">
-
-
 	<div class="footer row">
-		<div class="anhleft anh col-12 col-lg-4">
-			<a href="">
-				<img src="images/banquyen.png" width="150px" height="100px">
-			</a>
-		</div>
-		<div class="footer col-12 col-lg-4 p-0">
-			<div class="row ">
-				<div class="col-6 text-left">NAME        :</div>
-				<div class="col-6 text-left">HUỲNH VĂN VŨ</div>
-				<div class="col-6 text-left">CLASS        :</div>
-				<div class="col-6 text-left">DHHTTT10B</div>
-				<div class="col-6 text-left">ID        :</div>
-				<div class="col-6 text-left">14090071</div>
-				<div class="col-6 text-left">NUMBER-PHONE        :</div>
-				<div class="col-6 text-left">0708070404</div>
-			</div>
-
-			
-		</div>
-		<div class="anhright anh col-12 col-lg-4">
-			<a href="">
-				<img src="images/banquyen.png" width="150px" height="100px">
-			</a>
-		</div>
+		<img src="../view/images/footer.png">
 	</div>
-
-
-
 </div>
 <script type="text/javascript">
 	function openNav() {

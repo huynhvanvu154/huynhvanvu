@@ -197,7 +197,7 @@ class Database
 			}
 			public function search_benhnhan($key,$role)
 				{
-					$sql = "SELECT *FROM benhnhan WHERE HotenBN REGEXP '$key' ORDER BY idBN DESC  ";
+					$sql = "SELECT *FROM benhnhan WHERE Cmt REGEXP '$key' ORDER BY idBN DESC  ";
 					//var_dump($sql);die;
 					$e = $this ->execute($sql);
 
@@ -633,9 +633,13 @@ class Database
 				public function get_donthuoc_id_benhnhan($idBN)
 
 							{
-								$sql = "SELECT * FROM donthuoc WHERE id_benhnhan = $idBN ";
+								/*$sql_bn = "SELECT *FROM benhnhan WHERE idBN=$idBN";
+								///var_dump($sql_bn);die();
+								$result_bn = $this->execute($sql_bn);
+								//var_dump($result_bn); die();*/
+								$sql_dt = "SELECT * FROM donthuoc WHERE id_benhnhan = $idBN  ";
 								//var_dump($sql);die();
-								$result = $this->execute($sql);
+								$result_dt = $this->execute($sql_dt);
 								//var_dump($result);die();
 								if($this->num_rows()==0)
 									{

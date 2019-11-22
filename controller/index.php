@@ -115,6 +115,8 @@
 						$idBN = $_GET['idBN'];
 						//var_dump($idBN); die();
 						//var_dump($tenbenhnhan); die();
+					$data_benhnhan = $db->get_benhnhan_ID($idBN);
+					//var_dump($data_benhnhan['HotenBN']); die();
 					$data_benhan = $db->get_benhan_ID($idBN);
 					//var_dump($data_benhan); die();
 					$data_donthuoc = $db->get_donthuoc_id_benhnhan($idBN);
@@ -196,6 +198,18 @@
 			}
 		}
 			require_once('view/doimatkhau.php');
+			break;
+		case 'timbenhnhan':{
+
+					if(isset($_GET['ten']))
+					$key = $_GET['ten'];
+					$tbltable = "benhnhan";
+					
+						$search = $db->search_benhnhan($key,$tbltable);
+					//var_dump($search); die();
+
+				}
+			require_once('view/bacsi/timbenhnhan.php');
 			break;
 		default:
 			

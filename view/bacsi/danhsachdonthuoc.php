@@ -57,37 +57,49 @@
 					
 					<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
 									
-
-						<h3 class="col-12" style="text-align: center; color: #0000FF">
-						
-							<span><strong>Tên Bệnh Nhân:</strong></span> 
-							<span style="color: red"><?php echo $tenbenhnhan; ?></span></br>
-							<span><strong>Bệnh Án:</strong></span> 
+						<!-- <?php echo $data_benhnhan['Cmt']; ?> -->
+						<h6 class="col-12" style="text-align: center; color: #0000FF">
+						<p>	<span><strong style="float: left;">Họ Tên Bệnh Nhân:</strong></span> 
+							<span style="color: red"><?php echo $tenbenhnhan; ?></span></p>
+						<p>	<span><strong style="float: left;">Email:</strong></span> 
+						<span style="color: red; "><?php echo $data_benhnhan['email']; ?></span></p>
+						<p>	<span><strong style="float: left;">Giới Tính:</strong></span> 
+						<span style="color: red"><?php echo $data_benhnhan['Gioitinh'];; ?></span></p>
+						<p>	<span><strong style="float: left;">Ngày Sinh:</strong></span> 
+						<span style="color: red"><?php echo $data_benhnhan['Ngaysinh'];; ?></span></p>
+						<p>	<span><strong style="float: left;">Nghề Nghiệp:</strong></span> 
+						<span style="color: red"><?php echo $data_benhnhan['Nghenghiep'];; ?></span></p>
+						<p>	<span><strong style="float: left;">Địa Chỉ:</strong></span> 
+						<span style="color: red"><?php echo $data_benhnhan['Diachi'];; ?></span></p>
+						<p>	<span><strong style="float: left;">Dân Tộc:</strong></span> 
+						<span style="color: red"><?php echo $data_benhnhan['Dantoc'];; ?></span></p>
+						<p>	<span><strong style="float: left;">Số CMT:</strong></span> 
+						<span style="color: red"><?php echo $data_benhnhan['Cmt'];; ?></span></p>
+						<p>	<span><strong style="float: left;">Bệnh Án:</strong></span> 
 							<span style="color: red">
 								<?php
 								if($data_benhan==0){
 									echo "<h3>Chưa Có Bệnh Án</h3>";
-
 								}else{
 									
 									foreach ($data_benhan as $value) {
 										//var_dump($data_benhan); die();
 								?>	
-									-<?php echo $value['ten_benh_an']; ?></br>	
+									<?php echo $value['ten_benh_an']; ?>	
 								<?php
 									}
 									}
 								?>
 	
-							</span></br>
-							<strong>ĐƠN THUỐC</strong>
-						</h3>
+							</span></p>
+							</h6>
+							<legend style="color: #0000FF"><strong>ĐƠN THUỐC</strong></legend>
+						
 						<table class="col-12" border="1px;">
 							<thead>
 								<tr style="color: #0101DF; text-align: center;">
 									<td>STT</td>
 									<td>TÊN THUỐC</td>
-									
 									<td>XUẤT XỨ</td>
 									<td>LỜI DẶN</td>
 									

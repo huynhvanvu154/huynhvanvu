@@ -51,76 +51,90 @@ include('view/header.php');
 			?>
 		</div>
 		<div class="col-12 col-lg-9 menu-right ">
-			<ul  class="section row" >
-				<div class="col-12">
-					<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
+			<div >
+				<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
 						<table>
 							<tr>
-								<input type="hidden" name="controller" value="nguoinha">
+								<input type="hidden" name="controller" value="index">
 								<td><input type="text" name="ten" placeholder="Nhập CMT Bệnh Nhân"></td>
 								<td id="timkiem"><input type="submit" value="tìm kiếm"></td>
 							</tr>
 						</table>
 						<input type="hidden" name="action" value="timbenhnhan">
 					</form>
-					<form class=" row" action="" method="post" class="" role="form" style="">
-						<table>
-							<tr>
-								<td>Từ: <input type="date" name="datefrom" placeholder="Năm/Tháng/Ngày"></td>
-								<td>Đến: <input type="date" name="dateto" placeholder="Năm/Tháng/Ngày"></td>
-								<td ><input type="submit" name="submit" value="Xem Kết Quả"></td>
-							</tr>	
-						</table>
-					</form>
-					<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
-						<h3 class="col-12" style="text-align: center; color: #0000FF">
-							<strong>DANH SÁCH BỆNH ÁN</strong>
-						</h3>
-						<table class="col-12" border="1px;">
-							<thead>
-								<tr style="color: #0101DF; text-align: center;">
-									<td>STT</td>
-									<td>TÊN BỆNH ÁN</td>
-									<td>NGÀY NHẬP</td>
-								</tr>
-							</thead>
-							<tbody>
-								<?php 
-								if($data_benhan>0){
-									$stt=1;
-									foreach ($data_benhan as $value) {
-										?>
-										<tr>
-											<td><?php echo $stt?></td>
-											<td><?php echo $value['ten_benh_an']; ?></td>
-											<td><?php echo $value['date']; ?>
-										</tr>
-										<?php
-										$stt++;
-									}
-								}
-								else
-									echo '<p style="text-align: center; color: red; font-size: 200%">Danh sách trống</p>';
-								?>
-							</tbody>
-						</table>
+				<form class="section row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
+
+
+					<h3 class="col-12" style="text-align: center; color: #0000FF">
+						<strong>DANH SÁCH BỆNH NHÂN</strong>
+					</h3>
+					<table class="col-12" border="1px;">
+						<thead>
+							<tr style="color: #0101DF; text-align: center;">
+								<td>STT</td>
+								<td>HỌ VÀ TÊN</td>
+								<td>EMAIL</td>
+								<td>GIỚI TÍNH</td>
+								<td>NGÀY SINH</td>
+								<td>NGHỀ NGHIỆP</td>
+								<td>ĐỊA CHỈ</td>
+								<td>DÂN TỘC</td>
+								<td>Số CMT</td>
+								<td>ACTION</td>
+
+							</tr>
+
+						</thead>
 						
-					</form>
-				</div>
-				
+						<tbody>
+							<?php 
+							if($search<>0){
+							$stt=1;
+							foreach ($search as $value) {
+								?>
+								<tr>
+									<td><?php echo $stt?></td>
+									<td><?php echo $value['HotenBN']; ?></td>
+									<td><?php echo $value['email']; ?></td>
+									<td><?php echo $value['Gioitinh']; ?></td>
+									<td><?php echo $value['Ngaysinh']; ?></td>
+									<td><?php echo $value['Nghenghiep']; ?></td>
+									<td><?php echo $value['Diachi']; ?></td>
+									<td><?php echo $value['Dantoc']; ?></td>
+									<td><?php echo $value['Cmt']; ?></td>
+									<td>
+
+										<button><a style="text-decoration: none;" href="index.php?controller=index&action=thembenhan&idBN=<?php echo $value['idBN'];?>&ten=<?php echo  $value['HotenBN']; ?>">Thêm Đơn Thuốc</a></button>
+
+									</td> 
+
+								</tr>
+
+								<?php
+								$stt++;
+							}
+							?>
+
+
+						</tbody>
+					<?php }else echo "Danh sách trống"; ?>
+					</table>
+
+				</form>
 			</div>
-			
+
 		</div>
-	</div>
+</div>
+</div>
 	<?php 
 	include('view/footer.php');
 	?>
 	<script type="text/javascript">
-		function openNav() {
-			document.getElementById("mySidenav").style.width = "250px";
-		}
+	function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
 
-		function closeNav() {
-			document.getElementById("mySidenav").style.width = "0";
-		}
-	</script>
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+</script>

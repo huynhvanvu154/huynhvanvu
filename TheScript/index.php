@@ -43,16 +43,15 @@ if($_SESSION['email']){
     <link rel="stylesheet" type="text/css" href="../style.css">
   </head>
   <body>
-   <div class="container">
-    <div class=" header row">
-      <div class="BVN col-12 text-left">
-        <a  href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=trangchu">
-          <img src="image/icon2.png" height="60px;">
-          <img src="image/BVN.PNG" width="200" height="80">
-        </a>
-      </div>
+ <div class="container">
+  <div class=" header row">
+    <div class=" col-12 text-left">
+      <a  href="http://localhost/quanlybenhnhan/index.php?controller=nguoinha&action=trangchu">
+        <img src="../view/images/header.png"  >
+      </a>
     </div>
   </div>
+</div>
   <div class="container">
     <div class="row">
       <div class="col-12 p-0">
@@ -195,42 +194,11 @@ if($_SESSION['email']){
       </script>
     </div>
   </div>
-
-
-
-  <div class="container">
-
-
-    <div class="footer row">
-      <div class="anhleft anh col-12 col-lg-4">
-        <a href="">
-          <img src="image/banquyen.png" width="150px" height="100px">
-        </a>
-      </div>
-      <div class="footer col-12 col-lg-4 p-0">
-        <div class="row ">
-          <div class="col-6 text-left">NAME        :</div>
-          <div class="col-6 text-left">HUỲNH VĂN VŨ</div>
-          <div class="col-6 text-left">CLASS        :</div>
-          <div class="col-6 text-left">DHHTTT10B</div>
-          <div class="col-6 text-left">ID        :</div>
-          <div class="col-6 text-left">14090071</div>
-          <div class="col-6 text-left">NUMBER-PHONE        :</div>
-          <div class="col-6 text-left">0708070404</div>
-        </div>
-
-
-      </div>
-      <div class="anhright anh col-12 col-lg-4">
-        <a href="">
-          <img src="image/banquyen.png" width="150px" height="100px">
-        </a>
-      </div>
-    </div>
-
-
-
+<div class="container">
+  <div class="footer row">
+    <img src="../view/images/footer.png">
   </div>
+</div>
 </body>
 </html>
 <?php 

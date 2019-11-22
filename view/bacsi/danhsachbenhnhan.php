@@ -52,7 +52,16 @@ include('view/header.php');
 		</div>
 		<div class="col-12 col-lg-9 menu-right ">
 			<div >
-
+				<form class=" row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
+						<table>
+							<tr>
+								<input type="hidden" name="controller" value="index">
+								<td><input type="text" name="ten" placeholder="Nhập CMT Bệnh Nhân"></td>
+								<td id="timkiem"><input type="submit" value="tìm kiếm"></td>
+							</tr>
+						</table>
+						<input type="hidden" name="action" value="timbenhnhan">
+					</form>
 				<form class="section row" action="" method="GET" class="" role="form" style="width: auto; margin-top: 10px;">
 
 
